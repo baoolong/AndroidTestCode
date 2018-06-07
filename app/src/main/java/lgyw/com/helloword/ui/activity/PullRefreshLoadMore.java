@@ -1,7 +1,6 @@
 package lgyw.com.helloword.ui.activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -9,15 +8,12 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import cn.bingoogolapple.refreshlayout.BGAMoocStyleRefreshViewHolder;
 import cn.bingoogolapple.refreshlayout.BGARefreshLayout;
-import cn.bingoogolapple.refreshlayout.BGARefreshViewHolder;
 import lgyw.com.helloword.R;
 import lgyw.com.helloword.adapter.PullrefreshAdapter;
 
@@ -25,7 +21,6 @@ import lgyw.com.helloword.adapter.PullrefreshAdapter;
  *
  * Created by MrRight on 2017/11/8.
  */
-
 public class PullRefreshLoadMore extends Activity implements BGARefreshLayout.BGARefreshLayoutDelegate{
 
     private BGARefreshLayout mRefreshLayout;
@@ -112,39 +107,5 @@ public class PullRefreshLoadMore extends Activity implements BGARefreshLayout.BG
             }
         },3000);
         return true;
-    }
-
-
-
-    class MyBGARefreshViewHolder extends BGARefreshViewHolder {
-
-        /**
-         * @param context
-         * @param isLoadingMoreEnabled 上拉加载更多是否可用
-         */
-        public MyBGARefreshViewHolder(Context context, boolean isLoadingMoreEnabled) {
-            super(context, isLoadingMoreEnabled);
-        }
-
-        @Override
-        public View getRefreshHeaderView() {return null;}
-
-        @Override
-        public void handleScale(float scale, int moveYDistance) {}
-
-        @Override
-        public void changeToIdle() {}
-
-        @Override
-        public void changeToPullDown() {}
-
-        @Override
-        public void changeToReleaseRefresh() {}
-
-        @Override
-        public void changeToRefreshing() {}
-
-        @Override
-        public void onEndRefreshing(){}
     }
 }

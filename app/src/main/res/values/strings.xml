@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">HelloWord</string>
     <string name="network_error">网络错误！</string>
+    <string name="accessibility_tip">AccessibilityTip</string>
+    <string name="accessibility_desc">AccessibilityDesc</string>
+    <string name="openaccessibility">打开辅助功能</string>
+    <string name="startaccservice">开始抢红包</string>
 </resources>
